@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import StockTable from './stockTable.js';
 import './data.css';
 
 class Data extends Component {
@@ -11,21 +11,10 @@ class Data extends Component {
     render() {
         return (
             <div>
-                <AddButton/>
-                <div>
-                    Here is a table
-                </div>
+                <StockTable/>
             </div>
         );
     }
-}
-
-function AddButton(props) {
-    return (
-        <Button bsStyle="primary" onClick={props.onClick}>
-            {props.value}
-        </Button>
-    )
 }
 
 export default Data;
