@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import StockTable from "./stockTable";
 import "./data.css";
 
-class Data extends Component {
-    render() {
-        return (
-          <div>
-              <StockTable />
-            </div>
-        );
-    }
+function Data(props) {
+    return (
+        <div>
+            <StockTable />
+        </div>
+    );
 }
 
 export default Data;

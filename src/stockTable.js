@@ -1,32 +1,31 @@
 import React, { Component } from "react";
 import ReactTable from "react-table";
+import PropTypes from "prop-types";
 import "react-table/react-table.css";
 
-class StockTable extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: [
-                {
-                    buyPrice: "1",
-                    sellPrice: "2"
-                }
-            ],
-            columns: [
-                { Header: "Buy Price", accessor: "buyPrice" },
-                { Header: "Sell Price", accessor: "sellPrice" }
-            ]
-        };
-    }
+function StockTable(props, { store }) {
+    const state = store.getState();
+    const tableData = state.orders;
+    const columns = [
+        "order",
+        "order",
+        "order",
+        "order",
+        "order"
+    ];
 
-    render() {
-        return (
-          <ReactTable
-              data={this.state.data}
-              columns={this.state.columns}
-            />
-        );
-    }
+    console.log(tableData);
+
+    return (
+        <ReactTable
+            data={tableData}
+            columns={columns}
+        />
+    );
 }
+
+StockTable.contextTypes = {
+    store: PropTypes.object
+};
 
 export default StockTable;

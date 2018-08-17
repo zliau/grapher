@@ -7,14 +7,14 @@ import "./App.css";
 class App extends Component {
     render() {
         return (
-          <div className="App">
-              <header>
-              <Tabs
-                      title="Stock Table"
+            <div className="App">
+                <header>
+                    <Tabs
+                        title="Stock Table"
                     />
                 </header>
 
-              <Data />
+                <Data />
             </div>
         );
     }

@@ -26,15 +26,15 @@ const styles = {
 function Tabs(props) {
     const { classes, title } = props;
     return (
-      <div className={classes.root}>
-          <AppBar position="static">
-              <Toolbar>
-              <IconButton className={classes.menuButton} color="inherit">
-                      <MenuIcon />
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar>
+                    <IconButton className={classes.menuButton} color="inherit">
+                        <MenuIcon />
                     </IconButton>
 
-              <Typography variant="title" color="inherit" className={classes.flex}>
-                      {title}
+                    <Typography variant="title" color="inherit" className={classes.flex}>
+                        {title}
                     </Typography>
                 </Toolbar>
             </AppBar>
