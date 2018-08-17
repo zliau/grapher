@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
-import Tabs from './tabs';
-import Data from './data.js';
-import 'typeface-roboto';
-import './App.css';
+import React, { Component } from "react";
+import Tabs from "./tabs";
+import Data from "./data";
+import "typeface-roboto";
+import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header>
-          <Tabs
-            title="Stock Table"
-          />
-        </header>
+    render() {
+        return (
+          <div className="App">
+              <header>
+              <Tabs
+                      title="Stock Table"
+                    />
+                </header>
 
-        <Data />
-      </div>
-    );
-  }
+              <Data />
+            </div>
+        );
+    }
 }
 
 export default App;

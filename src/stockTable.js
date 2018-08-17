@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import ReactTable from 'react-table';
-import 'react-table/react-table.css';
+import React, { Component } from "react";
+import ReactTable from "react-table";
+import "react-table/react-table.css";
 
 class StockTable extends Component {
     constructor(props) {
@@ -16,13 +16,14 @@ class StockTable extends Component {
                 { Header: "Buy Price", accessor: "buyPrice" },
                 { Header: "Sell Price", accessor: "sellPrice" }
             ]
-        }
+        };
     }
+
     render() {
         return (
-            <ReactTable
-                data={this.state.data}
-                columns={this.state.columns}
+          <ReactTable
+              data={this.state.data}
+              columns={this.state.columns}
             />
         );
     }
