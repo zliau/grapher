@@ -3,10 +3,15 @@
   "extends": "airbnb",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-indent": [1, 4],
+    "react/jsx-indent-props": [1, 4],
+    "react/forbid-prop-types": [0],
     "comma-dangle": ["error", "never"],
     "eol-last": ["error", "never"],
     "quotes": ["error", "double"],
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "no-plusplus": 0,
+    "import/prefer-default-export": ["error", "never"]
   },
   "env": {
     "browser": true
