@@ -4,7 +4,7 @@ const addOrder = order => ({
     type: "ADD_ORDER",
     id: nextOrderId++,
     symbol: order.symbol,
-    num_contracts: order.num_contracts,
+    quantity: order.quantity,
     fill_price: order.fill_price,
     commission: order.commission,
     action: order.action,
