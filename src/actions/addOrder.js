@@ -3,11 +3,11 @@ let nextOrderId = 0;
 const addOrder = order => ({
     type: "ADD_ORDER",
     id: nextOrderId++,
-    symbol: order.symbol,
-    quantity: order.quantity,
-    fill_price: order.fill_price,
-    commission: order.commission,
-    action: order.action,
+    sym: order.sym,
+    qty: order.qty,
+    price: order.price,
+    com: order.com,
+    act: order.act,
     time: order.time
 });
 

@@ -1,16 +1,17 @@
 const orders = (state = [], action) => {
     switch (action.type) {
     case "ADD_ORDER": {
-        const newOrders = state.orders.concat({
-            symbol: action.symbol,
-            num_contracts: action.num_contracts,
-            fill_price: action.fill_price,
-            commission: action.commission,
-            action: action.action,
-            time: action.time
-        });
-
-        return Object.assign({}, state, { orders: newOrders });
+        return [
+            ...state,
+            {
+                sym: action.sym,
+                qty: action.qty,
+                price: action.price,
+                com: action.com,
+                act: action.act,
+                time: action.time
+            }
+        ];
     }
     default:
         return state;

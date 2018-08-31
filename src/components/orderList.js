@@ -3,9 +3,7 @@ import ReactTable from "react-table";
 import PropTypes from "prop-types";
 import "react-table/react-table.css";
 
-function OrderList(props, { store }) {
-    const state = store.getState();
-    const tableData = state.orders;
+function OrderList({ orders }) {
     const columns = [
         { Header: "Symbol", accessor: "sym" },
         { Header: "Quantity", accessor: "qty" },
@@ -17,14 +15,14 @@ function OrderList(props, { store }) {
 
     return (
         <ReactTable
-            data={tableData}
+            data={orders}
             columns={columns}
         />
     );
 }
 
-OrderList.contextTypes = {
-    store: PropTypes.object
+OrderList.propTypes = {
+    orders: PropTypes.array.isRequired
 };
 
 export default OrderList;
