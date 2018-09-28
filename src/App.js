@@ -4,8 +4,8 @@ import { withStyles } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
 import Tabs from "./tabs";
-import OrderList from "./containers/visibleOrderList";
-import AddOrder from "./containers/visibleAddOrder";
+import OrderListPage from "./containers/orderListPage";
+// import AddOrder from "./containers/visibleAddOrder";
 import "typeface-roboto";
 import "./App.css";
 
@@ -38,10 +38,10 @@ function App(props) {
             </header>
 
             <Card className={classes.card}>
-                <AddOrder />
+                {/* <AddOrder /> */}
             </Card>
             <Card className={classes.card}>
-                <OrderList />
+                <OrderListPage />
             </Card>
         </div>
     );

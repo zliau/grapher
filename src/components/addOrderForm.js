@@ -35,19 +35,19 @@ class AddOrderForm extends React.Component {
     }
 
     handleChange(e) {
-        let newOrder = this.state.order;
-        newOrder[e.target.id] = e.target.value;
+        const { order } = this.state;
+        order[e.target.id] = e.target.value;
 
         // Enable add button if all fields are filled
         let enableAdd = true;
-        Object.values(newOrder).forEach((key) => {
+        Object.values(order).forEach((key) => {
             if (key === "") {
                 enableAdd = false;
             }
         });
 
         this.setState({
-            order: newOrder,
+            order: order,
             enableAdd: enableAdd
         });
     }

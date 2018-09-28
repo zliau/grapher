@@ -1,20 +1,18 @@
-const orders = (state = [], action) => {
+import { ORDERS_FETCH_SUCCESS } from "../actions";
+
+const orders = (
+    state = {
+        list: []
+    },
+    action
+) => {
     switch (action.type) {
-    case "ADD_ORDER": {
-        return [
-            ...state,
-            {
-                sym: action.sym,
-                qty: action.qty,
-                price: action.price,
-                com: action.com,
-                act: action.act,
-                time: action.time
-            }
-        ];
-    }
-    default:
-        return state;
+        case ORDERS_FETCH_SUCCESS:
+            return {
+                list: action.payload
+            };
+        default:
+            return state;
     }
 };
 
